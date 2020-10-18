@@ -1,0 +1,29 @@
+
+@import "src/styles";
+
+
+
+  h2{
+
+    padding: 50px 0 55px 0 ;
+    font-size: 34px;
+    font-family:$headersFont;
+    color: $mainColor;
+    font-weight: bold ;
+    text-align: left;
+  }
+
+  p{
+    font-size: 20px;
+    color: $mainColor;
+    font-family: $paragraphFont;
+    font-weight: lighter;
+    line-height:2.5rem;
+    letter-spacing: 0.4px;
+
+  };
+  .textitem{
+    padding: 25px 0 0 0 ;
+  }
+
+

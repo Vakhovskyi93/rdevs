@@ -1,0 +1,79 @@
+
+
+
+<div class="container-fluid
+ pl-0 pr-0 pl-lg-1 pr-lg-1
+ backgroundPhoto
+ d-flex
+ flex-column
+ flex-md-row
+ justify-content-sm-center
+ justify-content-md-end">
+
+    <div class="col-sm-12 col-md-6 col-lg-5
+    d-flex flex-column flex-md-row justify-content-md-center justify-content-lg-end align-items-center
+    paddingStyle
+    ">
+      <div class="wraper    ">
+
+        <h2 class="text-right">CHOOSE  THE DAY FOR THE MEETING</h2>
+        <span class="p text-right"> We encourage you to book your</span>
+        <span class="p text-right"> appointment online.</span>
+        <span class="p text-right ">This will save you time.</span>
+      </div>
+
+    </div>
+
+    <div class=" pl-0 pr-0  col-sm-12 col-md-6 col-lg-4">
+      <div class="calendar d-flex justify-content-center  align-items-center  ">
+        <div class="wraper ">
+          <div class="calendarNav">
+            <span class="arrow" (click)="getLustMonth()"> <i class="material-icons">navigate_before</i></span>
+            <span class="month"> {{longMonth}} {{templateYear}} </span>
+
+            <span class="arrow" (click)="getNextMonth()"> <i class="material-icons">navigate_next</i></span>
+          </div>
+          <div class="days flex" id="days">
+
+          </div>
+          <div class="weeksDay">
+            <div  class="weekdayCell ">S</div>
+            <div  class="weekdayCell ">M</div>
+            <div  class="weekdayCell ">T</div>
+            <div  class="weekdayCell ">W</div>
+            <div  class="weekdayCell ">T</div>
+            <div  class="weekdayCell ">F</div>
+            <div  class="weekdayCell ">S</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  <div class="modal" *ngIf="modalDay">
+    <div class="modalWinodw">
+
+
+      <i class="material-icons close" (click)="resetSelectedDate()" >clear</i>
+
+
+      <div class="dataWrapper">
+        <div class="month">
+          <span class="label">Month</span>
+          <span class="data">{{month$ | async}} </span>
+        </div>
+        <div class="day">
+          <span class="label">Day</span>
+          <span class="data">{{day$ | async}}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+

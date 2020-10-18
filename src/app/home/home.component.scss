@@ -1,0 +1,165 @@
+@import "src/styles";
+
+.backgroundPhoto{
+  width: 100%;
+  min-height: 85%;
+  //height: calc(100vh - 130px);
+  background-image: url("../../assets/Untitled-1Artboard 1 copy.png")  ;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  position: relative;
+}
+h2{
+  text-align: right;
+  font-family:$headersFont ;
+  font-weight: 700;
+  color:$mainThemeColor;
+  font-size: 50px;
+  letter-spacing: .2rem;
+  padding: 0% 5% 0px 5%;
+}
+.wraper{
+  width: 100%;
+  max-width: 770px;
+  min-height: 410px;
+  padding: 8% 8%;
+}
+.p{
+  display: block;
+  text-align: right;
+  color: $lightColor;
+  font-family: $paragraphFont;
+  font-size: 30px;
+  letter-spacing: .1rem;
+  padding: 1% 5% 0 10%;
+}
+.calendar{
+  height: 100%;
+  background: #272829;
+  color: aliceblue;
+  padding: 0 8%;
+  .calendarNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid $lightColor;
+     .month{
+       font-size: 24px;
+       text-transform: uppercase;
+       color: white;
+     }
+  }
+  .days , .weeksDay{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 25px 0;
+
+    height: auto;
+  }
+  .today{
+    background-color: $mainThemeColor;
+  }
+  .choosed{
+    background-color: rgba(67%, 65%, 65%, .5);
+
+  }
+  .dayCellStyle, .weekdayCell{
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    width: 13.8%;
+    text-align: center;
+    padding: 10px 0;
+
+
+  }
+  .nextMonth,
+  .lustMonth{
+    opacity: 0.7;
+    color: $unactiveColor;
+  }
+  .weeksDay{
+    padding: 15px 0;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+  }
+
+}
+
+
+.modal{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+   top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(15%, 16%, 16%, .8);
+}
+.modalWinodw{
+  width: 510px ;
+  height: 140px;
+  position: relative;
+  background-color: $unactiveColor;
+
+}
+.close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px;
+  background-color: $mainThemeColor;
+}
+.dataWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 40px 0 0 0 ;
+  .label{
+    display: block;
+    font-size: 20px;
+    color: #A2A2A2;
+    padding: 0 0 4px 0;
+  }
+  .data{
+    display: block;
+    width: 200px;
+
+    padding: 14px 0 13px 20px;
+
+    font-size: 22px;
+    font-weight: 700;
+    border: 1px solid $mainThemeColor ;
+    color: #3d3d3d;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2{
+    font-size: 35px;
+  }
+  .p{
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  h2{
+    font-size: 45px;
+  }
+  .p{
+    font-size: 24px;
+  }
+}@media screen and (min-width: 1020px) {
+
+}
+@media screen and (max-width: 768px) and (min-width: 570px) {
+  .paddingStyle{
+    padding-top: 460px;
+  }
+}
